@@ -88,6 +88,12 @@ public class BasicController {
         return "basic/attribute";
     }
 
+    @GetMapping("/each")
+    public String each(Model model) {
+        addUsers(model);
+        return "basic/each";
+    }
+
     @Component("helloBean")
     static class HelloBean {
         public String hello(String data) {
